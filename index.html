@@ -3,15 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Budget Tracker</title>
 </head>
 <body>
+ <!-- main wrapper div -->
+<div class="main-wrapper">
+    <!-- container div -->
+    <div class="container">
+        <div class="subcontainer">
+            <h1 id="logo">Budget Tracker</h1>
+            <!--budget container-->
+            <div class="total-amount-container">
+                <h3>Budget</h3>
+                <p class="hide error" id="budget-error">Value cannot be empty or negative</p>
+                <input type="date" id="expense-date">
+                <input type="number" id="total-amount" placeholder="Enter Total Amount">
+                <button class="submit" id="total-amount-button">Set Budget</button>
+            </div>
+            <!--expense container-->
+            <div class="--expense-amount-container">
+                <h3>Expenses</h3>
+                <p class="hide error" id="expense-title-error">Value cannot be empty</p>
+                <input type="date" id="expense-date">
+                <input type="text" id="expense-title" class="expense-title" placeholder="Enter Expense Title">
+                <input type="number" id="expense-amount" placeholder="Enter Expense Amount">
+                <button class="submit" id="check-amount"> Check Amount</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
+   
+
  
     
 
-    <!-- java script -->
-    <script src="assets/js/script.js"></script>   
+<!-- java script -->
+<script src="assets/js/script.js"></script>   
 </body>
 </html>
