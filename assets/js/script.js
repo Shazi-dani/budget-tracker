@@ -1,4 +1,4 @@
-//Create Refrences Variables
+//Create Refrence Variables
 let totalAmount = document.getElementById("total-amount");
 let expenseAmount = document.getElementById("expense-amount");
 let totalAmountButton = document.getElementById("total-amount-button");
@@ -12,3 +12,27 @@ let amount = document.getElementById("amount");
 let expenditureValue = document.getElementById("expenditure-value");
 let list = document.getElementById("list");
 let tempAmount = 0;
+
+//set budget part
+totalAmountButton.addEventListener("click", () => {
+
+    tempAmount = totalAmount.value;
+//error message for budget section
+
+if (tempAmount === "" || tempAmount < 0) {
+    errorMessage.classList.remove ("hide");
+}
+else {
+    errorMessage.classList.add ("hide");
+
+//set budget
+amount.innerHTML = tempAmount;
+
+//set balance
+balanceValue.innerText = tempAmount - expenditureValue.innerText;
+
+//clear input box
+totalAmount.value = "";
+}
+
+});
