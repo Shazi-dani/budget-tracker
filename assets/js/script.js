@@ -5,7 +5,6 @@ let totalAmountButton = document.getElementById("total-amount-button");
 let checkAmountButton = document.getElementById("check-amount");
 let errorMessage = document.getElementById("budget-error");
 let expenseError = document.getElementById("expense-error");
-let budgetDate = document.getElementById("budget-date");
 let expenseDate = document.getElementById("expense-date");
 let expenseTitle = document.getElementById("expense-title");
 let amount = document.getElementById("amount");
@@ -56,14 +55,16 @@ let modifyElement = (element,edit = false) => {
     let parentDiv = element.parentElement;
     let currentBalance = balanceValue.innerText;
     let currentExpense = expenditureValue.innerText;
+    let parentDate = parentDiv.querySelector(".date").innerText;
     let parentAmount = parentDiv.querySelector(".amount").innerText;
     if (edit) {
         let parentText = parentDiv.querySelector(".expense").innerText;
+        expenseDate.value = parentDate
         expenseTitle.value = parentText;
         expenseAmount.value = parentAmount;
         disableButtons(true);
   }
-
+  
   balanceValue.innerText = parseInt(currentBalance) + parseInt(parentAmount);
   expenditureValue.innerText = parseInt(currentExpense) - parseInt(parentAmount);
   parentDiv.remove();
@@ -79,14 +80,14 @@ let modifyElement = (element,edit = false) => {
     //edit button
     let editButton = document.createElement("button");
     editButton.classList.add("fa-solid", "fa-pen-to-square", "edit");
-    editButton.style.fontSize = "24px";
+    editButton.style.fontSize = "25px";
     editButton.addEventListener("click", () => {
       modifyElement(editButton, true);
     });
     //delete button
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("fa-solid", "fa-trash-can", "delete");
-    deleteButton.style.fontSize = "24px";
+    deleteButton.style.fontSize = "25px";
     deleteButton.addEventListener("click", () => {
       modifyElement(deleteButton);
     });
@@ -99,10 +100,14 @@ let modifyElement = (element,edit = false) => {
 
 checkAmountButton.addEventListener("click", () => {
     //empty check
-    if (!expenseAmount.value || !expenseTitle.value) {
+    if (!expenseDate.value || !expenseAmount.value || !expenseTitle.value) {
        
        expenseError.classList.remove("hide");
        return false; 
+    }
+    else {
+
+      expenseError.classList.add("hide");
     }
 //enable button   
 disableButtons(false);

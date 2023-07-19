@@ -128,7 +128,7 @@ body {
     margin-bottom: 0.6em;
     padding: 0.5em 1em;
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr 1fr;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr 1.5fr;;
   }
   .expense {
     font-weight: 500;
@@ -139,6 +139,7 @@ body {
     color: #363d55;
   }
   .amount {
+    font-weight: 500;
     color: #414a67;
     margin-left: 10%;
   }
@@ -156,9 +157,7 @@ body {
   .error {
     color: #ff465a;
   }
-  .edit {
-    margin-left: auto;
-  }
+
   .edit,
   .delete {
     background: transparent;
@@ -166,6 +165,7 @@ body {
     margin-right: 1.5em;
     border: none;
     color: #527bc4;
+    margin-left: auto;
   }
   @media screen and (max-width: 600px) {
     .main-wrapper {
