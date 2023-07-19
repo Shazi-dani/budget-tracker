@@ -134,9 +134,13 @@ body {
     font-weight: 500;
     color: #363d55;
   }
+  .date {
+    font-weight: 500;
+    color: #363d55;
+  }
   .amount {
     color: #414a67;
-    margin-left: 20%;
+    margin-left: 10%;
   }
   .icons-container {
     width: 5em;
@@ -161,7 +165,7 @@ body {
     cursor: pointer;
     margin-right: 1.5em;
     border: none;
-    color: #587ef4;
+    color: #527bc4;
   }
   @media screen and (max-width: 600px) {
     .main-wrapper {
