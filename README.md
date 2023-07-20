@@ -2,7 +2,7 @@
 
 The Budget Tracker site is created for tracking expense according to your budget.As soon as the user sets the budget or adds an expense, this site display an output that shows the budget, total expenses, and the balance left.
 
-Following this output, I display a list of all the expenses which icludes expense  Date,titel and amount. In this list of items  also inculdes option to either edit or delete the list.
+Following this output, I display a list of all the expenses which icludes expense  Date,titel and amount.this list of items also inculdes option to either edit or delete the list.
 
 Budget Tracking is a fully responsive site.
 
@@ -25,7 +25,32 @@ Visit the deployed site: [Budget Tracker](https://shazi-dani.github.io/budget-tr
 
 Budget Tracker is comprised of one page which holds the budget section, expense section ,output section and expense list section.
 
-![Love Maths Site](documentation/lovemaths-site.png)
+## Picture of the Budget Section
+![Picture of the Budget Section](assets/images/budget-sec.png)
+
+In Budget section you can add your budget amount and when you click on set budget button it will start showing in output section under budget heading. baudget value must be positive if you click on button without adding anything or add negtive value will get an error message.
+## Picture of the Budget Section error
+![Picture of the Budget Section error](assets/images/budget-error.png)
+
+## Picture of the Expense Section
+![Picture of the Expense Section](assets/images/expense-sec.png)
+
+In Expense section you have to choose date of the expense, expense name and expense value and when you click on the check amount button then it will create a expense list in the expense list section and also shows expense value in output section and calculate how much balance left after that expense in your budget.
+if you click on button and if any field is empty you will get an error message.
+## Picture of the Expense Section error
+![Picture of the Expense Section error](assets/images/expense-error.png)
+
+## Picture of the Output Section
+![Picture of the Output Section](assets/images/output-sec.png)
+
+Output section shows budget value , expense value and also shows balance left value after calculating.
+
+## Picture of the Expense List Section
+![Picture of the Expense List Section](assets/images/expenselist-sec.png)
+
+this section display a list of all the expenses created by java script which icludes expense  Date,expense titel and amount.this list of items also inculdes option to either edit or delete the list.
+
+
 
 ### Accessibility
 
