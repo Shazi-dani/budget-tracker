@@ -46,7 +46,7 @@ if you click on button and if any field is empty you will get an error message.
 Output section shows budget value , expense value and also shows balance left value after calculating.
 
 ## Picture of the Expense List Section
-![Picture of the Expense List Section](assets/images/expenselist-sec.png)
+![Picture of the Expense List Section](assets/images/expenselist.sec.png)
 
 this section display a list of all the expenses created by java script which icludes expense  Date,expense titel and amount.this list of items also inculdes option to either edit or delete the list.
 
@@ -58,13 +58,20 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 * Using semantic HTML.
 * Ensuring that there is a sufficient colour contrast throughout the site.
+* Check Accessibility of the site through lighthouse testing.First time its only 74%. 
+
+![Picture of the Lighthouse testing first time](assets/images/testing-error.png)
+
+Then update html and css code according the suggestions given by lighthouse testing and make it 100%.
+
+![Picture of the Lighthouse testing after correction](assets/images/testing.img.png)
 
 ### Future Implementations
 
-* Improve the responsiveness of the site.
-* Add a countdown timer to add an extra element of difficulty to the game.
-* Add difficulty levels to the game, which would encourage players to progress to the next level while practicing their skills.
-* Add instructions on how to play the game (possibly via a modal).
+
+* Add income section and income list in future.
+* Add graphical representation of income,budget,expense and balance.
+
 
 - - -
 
@@ -76,25 +83,17 @@ HTML, CSS, JavaScript
 
 ### Frameworks, Libraries & Programs Used
 
-[Balsamiq](https://balsamiq.com/) - Used to create wireframes.
-
-[Git](https://git-scm.com/) - For version control.
-
 [Github](https://github.com/) - To save and store the files for the website.
 
 [GitPod](https://www.gitpod.io/) - IDE
 
 [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
 
-[Font Awesome](https://fontawesome.com/) - Version 5.7.2 - For the iconography on the website.
+[Font Awesome](https://fontawesome.com/) - For the iconography on the website.
 
 [Google Developer Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-[Favicon.io](https://favicon.io/) To create favicon.
-
 [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
-
-[Shields.io](https://shields.io/) To add badges to the README
 
 - - -
 
@@ -105,7 +104,7 @@ HTML, CSS, JavaScript
 The site is deployed using GitHub Pages. To Deploy the site using GitHub Pages:
 
 1. Login (or signup) to Github.
-2. Go to the repository for this project, [kera-cudmore/love-maths](https://github.com/kera-cudmore/love-maths)
+2. Go to the repository for this project, [Shazi-dani/budget-tracker](https://shazi-dani.github.io/budget-tracker/)
 3. Click the settings button.
 4. Select pages in the left hand navigation menu.
 5. From the source dropdown select main branch and press save.
@@ -115,10 +114,10 @@ The site is deployed using GitHub Pages. To Deploy the site using GitHub Pages:
 
 #### How to Fork
 
-To fork the love-maths repository:
+To fork the Budget-Tracker repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, [kera-cudmore/love-maths](https://github.com/kera-cudmore/love-maths)
+2. Go to the repository for this project, [Shazi-dani/budget-tracker](https://shazi-dani.github.io/budget-tracker/)
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
@@ -126,7 +125,7 @@ To fork the love-maths repository:
 To clone the empowered repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, [kera-cudmore/love-maths](https://github.com/kera-cudmore/love-maths)
+2. Go to the repository for this project, [Shazi-dani/budget-tracker](https://shazi-dani.github.io/budget-tracker/)
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -141,45 +140,55 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 The W3C validator was used to validate the HTML. It was also used to validate CSS in the style.css file. Both files passed validation with no errors.
 
-* [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fkera-cudmore.github.io%2Flove-maths%2F)
-* [style.css](documentation/love-maths-css.png)
+* [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fshazi-dani.githubio%2Fbudget-tracker%2F)
+* [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-shazidani-budgettracker-kf85puz222k.ws-eu102.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 ### Jshint JavaScript Validator
 
-JShint was used to validate the JavaScript.
+ - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+ - The following metrics were returned: 
 
-* [script.js](documentation/jshint-validation.png)
+* there are 8 functions in this file.
 
-### Testing User Stories
+* Function with the largest signature take 3 arguments, while the median is 0.5.
 
-| User Story | How Achieved? | Evidence |
-| :--- | :--- | :--- |
-| I want to be able to understand how to use the site without having to read instructions. | The site is intuitive for users to use with its labelled buttons and layout | ![easy to use site](documentation/us-intuitive-site.png) |
-| I want to be able to switch the type of questions I answer. | Users can change the questions by selecting one of the math buttons | ![change questions](documentation/us-change-questions.png) |
-| I want to be able to keep track of my score. | At the bottom of the game screen is a score counter which allows users to keep track of the scores, both correct and incorrect | ![scores evidence](documentation/us-scores.png)|
+* Largest function has 15 statements in it, while the median is 4.5.
+
+* The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+
 
 ### Lighthouse
 
 I used Lighthouse within the Chrome Developer Tools to allow me to test the performance, accessibility, best practices and SEO of the website.
 
-![Lighthouse Report](documentation/lighthouse.png)
+![Lighthouse Report](assets/images/testing.img.png)
 
-- - -
 
-## Bugs
-
-### Solved Bugs
-
-| No | Bug | How I solved the issue | Evidence |
-|:--- | :--- | :--- | :---: |
-| 1 | Game buttons weren't displaying responsive on smaller screens | I added some padding to the buttons to make them display better on smaller screens | ![Solved bug 1](documentation/solved-bug-1.png) |
 - - -
 ## Credits
 
-### Code Used
+* Code Institute without who I would have had no base to begin a project & Readme.md Template. https://codeinstitute.net/ie/
 
-This project was created as part of a walkthrough project on the Code Institutes Full Stack Diploma JavaScript modules.
+* GitHub for my workspace and saving all my work as well as my deployed project . https://github.com/
 
-### Media
+* Gitpod for my coding. https://app.codeanywhere.com/
 
-The Love Maths logo image was supplied by the Code Institute.
+* The Slack community - for someone always been there no matter the time and with advice or direction. https://slack.com
+
+* Google Fonts for my font choose for the project. https://fonts.google.com
+
+* StackOverflow for all the information to assit with my project .https://stackoverflow.com
+
+* W3C Validators both HTML and CSS to keep a check on my code. The W3C Markup Validation Service https://validator.w3.org
+
+* I am Responsive for a fantastic spot to see a visual of responsiveness . https://ui.dev/amiresponsive?url=https://8000-shazidani-gponline-9wlpxvh7fwf.ws-eu99.gitpod.io
+
+* Lighthouse testing system.
+
+* Jshint JavaScript Validator [Jshint validator](https://jshint.com/)
+
+* The delete and edit icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+* Youtube Tutorials For getting ideas and inspiration for the site.Instructions on how to implement java script validation and list creating with java script. [Specific YouTube Tutorial](https://www.youtube.com/watch?v=i1pxPSl9ZHc)
+
+Copied Code / Code assistance As stated in Technologies / Support Used I used and sort out help and code from numerous sources as well as fonts and images. Stack over flow and Tutor Support played a huge roll in my overall development.
