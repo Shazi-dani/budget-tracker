@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 //Create Refrence Variables
 let totalAmount = document.getElementById("total-amount");
 let expenseAmount = document.getElementById("expense-amount");
@@ -59,7 +60,7 @@ let modifyElement = (element,edit = false) => {
     let parentAmount = parentDiv.querySelector(".amount").innerText;
     if (edit) {
         let parentText = parentDiv.querySelector(".expense").innerText;
-        expenseDate.value = parentDate
+        expenseDate.value = parentDate;
         expenseTitle.value = parentText;
         expenseAmount.value = parentAmount;
         disableButtons(true);
